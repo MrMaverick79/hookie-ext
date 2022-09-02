@@ -4,20 +4,20 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Hookie Bookmark</title>
 
 </head>
 <body>
-        <form action="https://hookiebookmarks.herokuapp.com/links/new" method="create" enctype="application/x-www-form-urlencoded">
+        <form action="https://hookiebookmarks.herokuapp.com/links/new" method="get" enctype="application/x-www-form-urlencoded">
             <label for="url">Url:
-                <input type="text" name="url">
+                <input type="text" name="url" id="url">
             </label>
             <label for="name">Name:
-                <input type="text" name="name">
+                <input type="text" name="name" id="name">
             </label>
-            
+            <input type="hidden" name="user_id" value="current_user.id">
         
-            <submit  ><button>
+            <submit ><button onclick="grabUrl()">
                 Add to Hookie
             </button>
                 </submit>

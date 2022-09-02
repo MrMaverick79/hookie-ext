@@ -10,7 +10,7 @@
     },
   
     "permissions": [
-      "bookmarks",
+      "tabs",
       "activeTab"
     ],
   
@@ -21,11 +21,12 @@
   
       
     },
+    
 
     "background": {
-      "scripts": ["background.js"]
+      "scripts": ["hookie.js"]
     }
-  
+    
 
    
    
