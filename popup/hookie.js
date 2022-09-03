@@ -1,13 +1,22 @@
 
-
-function grabUrl() {
-    
-    document.body.style.border = "5px solid red"
-    
+//grabs the current url and pusts it in the url field
+function grabCurrentUrl(tabs) {
+    let tab = tabs[0]; // Safe to assume there will only be one result
+    let currentUrl =  tab.url;
+    document.getElementById("url").value = currentUrl;
 }
 
-// document.body.style.border = "5px solid red";
+function grabCurrentName(tabs) {
+    let tab = tabs[0]
+    let currentTitle = tab.title;
+    document.getElementById("name").value = currentTitle;
+}
+  
+browser.tabs.query({currentWindow: true, active: true}).then(grabCurrentUrl, console.error)
 
-document.getElementById("url").value = window.location.href
+browser.tabs.query({currentWindow: true, active: true}).then(grabCurrentName, console.error)
 
-document.getElementById("name").value = tabs.activeTab.url
+function addDetails() {
+    console.log('Clicked');
+}
+
