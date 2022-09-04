@@ -16,7 +16,7 @@ browser.tabs.query({currentWindow: true, active: true}).then(grabCurrentUrl, con
 
 browser.tabs.query({currentWindow: true, active: true}).then(grabCurrentName, console.error)
 
-function addDetails() {
-    console.log('Clicked');
+function addedLink() {
+    window.alert('Added to Hookie!');
 }
 

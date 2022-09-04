@@ -4,20 +4,23 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="hookie.css">
     <title>Hookie Bookmark</title>
 
 </head>
 <body>
-        <form action="https://hookiebookmarks.herokuapp.com/links?sslmode=require&&auth:token=d7171355-6a0a-4ea6-8f85-aaf290385b87" method="post" enctype="application/x-www-form-urlencoded">
+    <div class="login_form">
+        <form action="http://localhost:3000/links" method="post" >
             <label for="url">Url:
                 <input type="text" name="url" id="url">
             </label>
             <label for="name">Name:
                 <input type="text" name="name" id="name">
             </label>
+                <input type="hidden" name="hook_title" value="Hookie Extension">
            
         
-            <button><submit  >
+            <button onclick="addedLink()" class="button"><submit  >
                 Add to Hookie
             </submit>
                
@@ -26,7 +29,7 @@
 
 
         </form>
-
+    </div>
 
         <script src="hookie.js"></script>
 </body>
